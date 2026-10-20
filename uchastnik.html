@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Стани участник – Училището има талант</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <p class="site-title">Училището има талант</p>
+    <p class="slogan">Всеки има какво да покаже – ела и го покажи!</p>
+    <nav class="main-nav">
+      <a href="festival.html">Начало</a>
+      <a href="festival.html#program">Програма</a>
+      <a href="festival.html#participants">Участници</a>
+      <a href="festival.html#contacts">Контакти</a>
+    </nav>
+  </header>
+
+  <main class="form-page">
+    <h1>Стани участник!</h1>
+    <p>Попълни формата и ние ще се свържем с теб, за да уточним изпълнението ти.</p>
+
+    <div class="form-card">
+      <form id="signup-form" action="#" method="post">
+
+        <label for="fullname">Имена на участника *</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Например: Мария Иванова" required>
+
+        <label for="email">Имейл *</label>
+        <input type="email" id="email" name="email" placeholder="ime@example.com" required>
+
+        <label for="phone">Телефон за контакт</label>
+        <input type="tel" id="phone" name="phone" placeholder="0888 123 456">
+
+        <label for="class">Клас</label>
+        <input type="text" id="class" name="class" placeholder="Например: 7 „Б“">
+
+        <label for="category">Вид изпълнение *</label>
+        <select id="category" name="category" required>
+          <option value="">– Избери –</option>
+          <option value="music">Музикално изпълнение</option>
+          <option value="dance">Танц</option>
+          <option value="art">Рисунка</option>
+          <option value="project">Ученически проект</option>
+          <option value="sport">Спортно умение</option>
+          <option value="other">Друго</option>
+        </select>
+
+        <label for="message">Разкажи ни повече за изпълнението си</label>
+        <textarea id="message" name="message" rows="4" placeholder="Какво ще представиш и колко време ти е нужно?"></textarea>
+
+        <button type="submit" class="btn-submit">Изпрати заявката</button>
+      </form>
+
+      <p class="success-message" id="success" role="status">Благодарим ти! Заявката е изпратена – ще се свържем с теб скоро.</p>
+    </div>
+
+    <a class="back-link" href="festival.html">← Обратно към фестивала</a>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2027 СУ „Св. св. Кирил и Методий“ – фестивал „Училището има талант“</p>
+  </footer>
+
+  <script>
+    document.getElementById("signup-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.getElementById("success").classList.add("visible");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
